@@ -1,6 +1,6 @@
 {
   "name": "@elpod/core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "description": "Enterprise-friendly structure for Elysia: explicit DI, feature pods, and native controller routes.",
   "type": "module",
