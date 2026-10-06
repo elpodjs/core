@@ -1,4 +1,4 @@
-import { pod } from "elpod";
+import { pod } from "@elpod/core";
 import { AppController } from "./app.controller";
 
 export const app = pod({

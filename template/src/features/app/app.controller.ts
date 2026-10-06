@@ -1,4 +1,4 @@
-import type { ElpodElysia } from "elpod";
+import type { ElpodElysia } from "@elpod/core";
 
 export class AppController {
   routes(app: ElpodElysia) {

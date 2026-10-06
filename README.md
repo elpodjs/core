@@ -47,7 +47,7 @@ export class HelloService {
 
 ```ts
 // src/features/hello/hello.controller.ts
-import type { ElpodElysia } from "elpod";
+import type { ElpodElysia } from "@elpod/core";
 import { HelloService } from "./hello.service";
 
 export class HelloController {
@@ -62,7 +62,7 @@ export class HelloController {
 
 ```ts
 // src/features/hello/hello.pod.ts
-import { pod } from "elpod";
+import { pod } from "@elpod/core";
 import { HelloController } from "./hello.controller";
 import { HelloService } from "./hello.service";
 

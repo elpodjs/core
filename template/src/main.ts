@@ -1,4 +1,4 @@
-import { defineConfig, env, healthRoutes, start } from "elpod";
+import { defineConfig, env, healthRoutes, start } from "@elpod/core";
 import { app } from "./app";
 
 const config = defineConfig({

@@ -33,7 +33,7 @@ function validateFeatureName(name: string) {
 
 function controllerSource(name: string) {
   const className = pascal(name);
-  return `import type { ElpodElysia } from "elpod";
+  return `import type { ElpodElysia } from "@elpod/core";
 import { ${className}Service } from "./${name}.service";
 
 export class ${className}Controller {
@@ -50,7 +50,7 @@ export class ${className}Controller {
 
 function podSource(name: string) {
   const className = pascal(name);
-  return `import { pod } from "elpod";
+  return `import { pod } from "@elpod/core";
 import { ${className}Controller } from "./${name}.controller";
 import { ${className}Service } from "./${name}.service";
 

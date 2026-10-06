@@ -1,4 +1,4 @@
-import type { ElpodElysia } from "elpod";
+import type { ElpodElysia } from "@elpod/core";
 import { HelloService } from "./hello.service";
 
 export class HelloController {

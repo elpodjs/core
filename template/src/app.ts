@@ -1,4 +1,4 @@
-import { application, type ElpodContract } from "elpod";
+import { application, type ElpodContract } from "@elpod/core";
 import { app as appFeature } from "@features/app/app.pod";
 import { hello } from "@features/hello/hello.pod";
 import { Clock } from "@infra/clock";

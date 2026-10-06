@@ -1,4 +1,4 @@
-import { pod } from "elpod";
+import { pod } from "@elpod/core";
 import { HelloController } from "./hello.controller";
 import { HelloService } from "./hello.service";
 

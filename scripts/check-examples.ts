@@ -24,7 +24,7 @@ for (const appPath of trackedApps) {
   if (exitCode !== 0) throw new Error(`example typecheck failed: ${name}`);
 
   const runtime = Bun.spawn([process.execPath, "-e", `
-    import { bootstrap, disposeBootstrap } from "elpod";
+    import { bootstrap, disposeBootstrap } from "@elpod/core";
     import { app } from "./src/app.ts";
     const server = await bootstrap(app, { printFeatures: false });
     try {

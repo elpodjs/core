@@ -1,6 +1,6 @@
 {
-  "name": "elpod",
-  "version": "0.0.1",
+  "name": "@elpod/core",
+  "version": "0.1.0",
   "private": false,
   "description": "Enterprise-friendly structure for Elysia: explicit DI, feature pods, and native controller routes.",
   "type": "module",
@@ -8,11 +8,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/acefolioDev/elpod.git"
+    "url": "git+ssh://git@github.com/elpodjs/core.git"
   },
-  "homepage": "https://github.com/acefolioDev/elpod",
+  "homepage": "https://github.com/elpodjs/core",
   "bugs": {
-    "url": "https://github.com/acefolioDev/elpod/issues"
+    "url": "https://github.com/elpodjs/core/issues"
   },
   "keywords": [
     "bun",
@@ -32,8 +32,8 @@
       "default": "./dist/index.js"
     }
   },
-  "bin": {
-    "elpod": "dist/cli/elpod.js"
+  "publishConfig": {
+    "access": "public"
   },
   "files": [
     "dist",
@@ -43,7 +43,7 @@
     "CHANGELOG.md"
   ],
   "scripts": {
-    "build": "bun run build:types && bun build src/kernel/index.ts --outfile dist/index.js --target bun --format esm --external elysia && bun build src/cli/elpod.ts --outfile dist/cli/elpod.js --target bun --format esm --external elysia",
+    "build": "rm -rf dist && bun run build:types && bun build src/kernel/index.ts --outfile dist/index.js --target bun --format esm --external elysia",
     "build:types": "bunx tsc -p tsconfig.build.json",
     "typecheck": "bunx tsc --noEmit",
     "check:examples": "bun scripts/check-examples.ts",
