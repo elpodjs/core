@@ -25,14 +25,12 @@ Elpod is for teams building a medium-to-large Bun/Elysia service who want named 
 ## Quickstart
 
 ```bash
-mkdir my-app && cd my-app
-bun init -y
-bun add @elpod/core
-bunx elpod init
+bun create elpod my-app
+cd my-app
 bun run dev
 ```
 
-`bunx elpod init` creates the starter structure; installing Elpod does not modify an application. See [Getting started](./docs/getting-started.md) for the longer path.
+`bun create elpod` creates the starter structure and installs both `@elpod/core` and `@elpod/cli`. See [Getting started](./docs/getting-started.md) for the longer path.
 
 ## A minimal feature
 

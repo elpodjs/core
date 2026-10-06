@@ -6,7 +6,17 @@ The CLI is the launch console for the conventions in your repository. It can cre
 
 ## How Elpod provides it
 
-The `elpod` executable is included in the package. Run it with `bunx elpod ...` or through project scripts.
+The `elpod` executable is provided by `@elpod/cli`. New applications should
+be created with `bun create elpod`, which installs the CLI as a project
+development dependency. You can then run it with `bunx elpod ...` or through
+project scripts.
+
+For an existing application, install the packages directly:
+
+```bash
+bun add @elpod/core
+bun add -d @elpod/cli
+```
 
 | Command | Purpose |
 | --- | --- |

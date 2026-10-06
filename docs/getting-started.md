@@ -21,15 +21,12 @@ Install Bun 1.4 or newer. Elpod is TypeScript-only and publishes a Bun ESM runti
 ## Create and run an application
 
 ```bash
-mkdir hello-elpod
+bun create elpod hello-elpod
 cd hello-elpod
-bun init -y
-bun add @elpod/core elysia
-bunx elpod init
 bun run dev
 ```
 
-The initializer creates `src/main.ts`, `src/app.ts`, one `hello` feature, shared infrastructure, TypeScript configuration, and scripts. Installing the package alone does not modify a project. Deployment files are opt-in:
+The generator installs `@elpod/core` and `@elpod/cli`, then creates `src/main.ts`, `src/app.ts`, one `hello` feature, shared infrastructure, TypeScript configuration, and scripts. Deployment files are opt-in:
 
 ```bash
 bunx elpod deployment init
