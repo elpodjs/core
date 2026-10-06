@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "elpod",
+      "name": "@elpod/core",
       "dependencies": {
         "elysia": "^1.4.30",
       },

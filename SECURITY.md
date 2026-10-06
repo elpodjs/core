@@ -12,7 +12,7 @@ Elpod is a working alpha. Until 1.0.0, security fixes are handled on a best-effo
 
 ## Reporting a vulnerability
 
-Please use [GitHub private vulnerability reporting](https://github.com/acefolioDev/elpod/security/advisories/new) rather than a public issue. Include the affected version or commit, a minimal reproduction, impact, and any suggested mitigation. Do not include real credentials or private user data.
+Please use [GitHub private vulnerability reporting](https://github.com/elpodjs/core/security/advisories/new) rather than a public issue. Include the affected version or commit, a minimal reproduction, impact, and any suggested mitigation. Do not include real credentials or private user data.
 
 If private reporting is unavailable, use the placeholder maintainer contact in the repository until it is replaced before launch: **[dev.muhammad.atif@gmail.com](mailto:dev.muhammad.atif@gmail.com)**
 

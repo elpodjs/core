@@ -9,7 +9,7 @@
 `healthRoutes()` registers liveness and readiness routes. Liveness answers whether the process is running. Readiness checks dependencies and returns `503` when a check fails or shutdown has begun.
 
 ```ts
-import { healthRoutes, start } from "elpod";
+import { healthRoutes, start } from "@elpod/core";
 
 const { server } = await start(app, {
   listen: config.port,

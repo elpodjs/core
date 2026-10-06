@@ -9,7 +9,7 @@ Roles are coarse labels. Real authorization asks questions like “can this edit
 Policies are explicit resource-level authorization functions. `definePolicy()` gives each rule a typed principal and resource and throws `FORBIDDEN` when a rule returns false.
 
 ```ts
-import { definePolicy, type Principal } from "elpod";
+import { definePolicy, type Principal } from "@elpod/core";
 
 type Post = { ownerId: string; published: boolean };
 const postPolicy = definePolicy<Principal, Post>({

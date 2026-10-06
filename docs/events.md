@@ -28,7 +28,7 @@ Events are for completed facts such as `order.paid` or `user.registered`. They a
 Keep the payload small and intentional. Send identifiers and facts a consumer needs—not an ORM object or the whole HTTP request.
 
 ```ts
-import { EventRegistry, type EventMap } from "elpod";
+import { EventRegistry, type EventMap } from "@elpod/core";
 
 type AppEvents = EventMap & {
   "order.paid": {
@@ -62,7 +62,7 @@ The reliable production path is:
 The outbox matters because a database write and a broker publish cannot be one atomic operation. Without it, an order could be paid successfully just as publishing `order.paid` fails—and no downstream system would ever know.
 
 ```ts
-import { EventOutbox } from "elpod";
+import { EventOutbox } from "@elpod/core";
 
 const outbox = new EventOutbox(events, outboxStore, brokerPublisher);
 
@@ -91,7 +91,7 @@ await outbox.publishPending(100);
 The consumer receives a broker message, validates it through the registry, and sends it to typed local handlers.
 
 ```ts
-import { EventBus, EventConsumer } from "elpod";
+import { EventBus, EventConsumer } from "@elpod/core";
 
 const bus = new EventBus<AppEvents>();
 

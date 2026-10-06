@@ -9,7 +9,7 @@ Rate limiting is crowd control. It protects expensive work and gives honest clie
 `rateLimit()` applies a bounded request decision through a `RateLimitStore`. `MemoryRateLimitStore` is suitable for one process and tests.
 
 ```ts
-import { MemoryRateLimitStore, rateLimit } from "elpod";
+import { MemoryRateLimitStore, rateLimit } from "@elpod/core";
 
 const limiter = rateLimit({
   store: new MemoryRateLimitStore(),

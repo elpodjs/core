@@ -7,7 +7,7 @@ Thanks for helping improve Elpod. It is a working alpha, so small, well-scoped c
 Requirements: Bun `>=1.4.0` and Git.
 
 ```bash
-git clone https://github.com/acefolioDev/elpod.git
+git clone https://github.com/elpodjs/core.git
 cd elpod
 bun install --frozen-lockfile
 bun run check

@@ -2,9 +2,9 @@
 
 An enterprise-friendly structure for Elysia applications: explicit constructor DI, feature boundaries, and native Elysia routes in controllers.
 
-[![npm version](https://img.shields.io/npm/v/elpod?logo=npm)](https://www.npmjs.com/package/elpod)
-[![CI](https://github.com/acefolioDev/elpod/actions/workflows/ci.yml/badge.svg)](https://github.com/acefolioDev/elpod/actions/workflows/ci.yml)
-[![License](https://img.shields.io/github/license/acefolioDev/elpod)](./LICENSE)
+[![npm version](https://img.shields.io/npm/v/%40elpod%2Fcore?logo=npm)](https://www.npmjs.com/package/@elpod/core)
+[![CI](https://github.com/elpodjs/core/actions/workflows/ci.yml/badge.svg)](https://github.com/elpodjs/core/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/elpodjs/core)](./LICENSE)
 [![Bun](https://img.shields.io/badge/runtime-Bun-000000?logo=bun)](https://bun.sh)
 
 > Working alpha. APIs and conventions may change. Elpod is a foundation for application structure, not a production-readiness or security guarantee.
@@ -27,7 +27,7 @@ Elpod is for teams building a medium-to-large Bun/Elysia service who want named 
 ```bash
 mkdir my-app && cd my-app
 bun init -y
-bun add elpod
+bun add @elpod/core
 bunx elpod init
 bun run dev
 ```

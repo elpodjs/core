@@ -9,7 +9,7 @@ A browser needs a small “remember me” token, but the browser should not carr
 `sessions()` provides secure opaque-cookie plumbing around an application-owned `SessionStore`. The cookie contains a random session ID, not the session object.
 
 ```ts
-import { sessions, requireSession, type Session } from "elpod";
+import { sessions, requireSession, type Session } from "@elpod/core";
 
 type UserSession = Session & { userId: string };
 const sessionAuth = sessions<UserSession>({

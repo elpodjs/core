@@ -9,7 +9,7 @@ A cache is a shortcut, not the source of truth. A lock is a “one person at a t
 Caching is explicit; Elpod never silently caches route results. `MemoryCache` is useful for development and one-process workloads. It supports TTLs, bounded LRU storage, namespaces, tags, and concurrent-loader coalescing.
 
 ```ts
-import { MemoryCache } from "elpod";
+import { MemoryCache } from "@elpod/core";
 
 const cache = new MemoryCache({ maxEntries: 10_000 });
 const user = await cache.getOrSet(`user:${userId}`, () => users.find(userId), {
@@ -26,7 +26,7 @@ Use a cache when stale data is acceptable or recomputation is expensive. Use tag
 `LockStore` and `withLock` express a critical section. `MemoryLockStore` is process-local.
 
 ```ts
-import { withLock } from "elpod";
+import { withLock } from "@elpod/core";
 
 await withLock(lockStore, `user:${userId}`, () => rebuildUser(userId), {
   ttlMs: 10_000,

@@ -9,7 +9,7 @@ Environment variables arrive as strings, but your application needs decisions: a
 `defineConfig()` parses a definition at startup. The `env` helpers make required values, defaults, ranges, URLs, durations, and secrets explicit.
 
 ```ts
-import { defineConfig, env, inspectConfig } from "elpod";
+import { defineConfig, env, inspectConfig } from "@elpod/core";
 
 export const config = defineConfig({
   port: env.number("PORT", { default: 3000, min: 1, max: 65_535 }),

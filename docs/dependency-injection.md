@@ -9,7 +9,7 @@ Picture a workshop. A repair job should receive the wrench, diagnostic reader, a
 Elpod uses explicit constructor injection. A provider is a class, value, or factory registered in a container. A class declares dependencies with a static `inject` tuple—or the readable `needs` alias. There is no reflection, service locator, decorator, or hidden global singleton.
 
 ```ts
-import { token, provideFactory, provideValue } from "elpod";
+import { token, provideFactory, provideValue } from "@elpod/core";
 
 export class Clock {
   now() { return new Date(); }
@@ -53,7 +53,7 @@ export class RequestAudit {
 Use `injectHandler([Token], handler)` when a native route needs request-scoped dependencies. The handler receives normal Elysia context first, followed by resolved dependencies.
 
 ```ts
-import { injectHandler, type ElpodElysia } from "elpod";
+import { injectHandler, type ElpodElysia } from "@elpod/core";
 
 class Controller {
   routes(app: ElpodElysia) {

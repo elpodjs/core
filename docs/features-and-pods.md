@@ -9,7 +9,7 @@ A **feature** is a business boundary: users, billing, reports, or another cohesi
 ## How Elpod provides it
 
 ```ts
-import { pod } from "elpod";
+import { pod } from "@elpod/core";
 import { UsersController } from "./users.controller";
 import { UsersService } from "./users.service";
 

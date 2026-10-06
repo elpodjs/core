@@ -9,7 +9,7 @@ Authentication answers “who are you?” It does not answer “may you edit thi
 Authentication turns a request into a principal. Elpod supplies extractors and an adapter-friendly middleware; your authenticator verifies the credential with your identity provider.
 
 ```ts
-import { authentication, bearerToken, requireUser, type Principal } from "elpod";
+import { authentication, bearerToken, requireUser, type Principal } from "@elpod/core";
 
 const auth = authentication<Principal>(async (request) => {
   const token = bearerToken(request);
@@ -26,7 +26,7 @@ Use `apiKeyFrom(request)` for header-based API keys or `cookieValue(request, nam
 For password-based accounts, use the password service at the account boundary:
 
 ```ts
-import { bunPasswordHasher, passwordService } from "elpod";
+import { bunPasswordHasher, passwordService } from "@elpod/core";
 
 const passwords = passwordService(bunPasswordHasher(), {
   minLength: 12,

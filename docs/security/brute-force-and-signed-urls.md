@@ -9,7 +9,7 @@ Brute-force protection makes repeated guesses expensive. A signed URL does the o
 Use `BruteForceGuard` to track repeated failures at a login or sensitive-operation boundary. The memory store is bounded and process-local; a shared atomic store is needed across replicas.
 
 ```ts
-import { BruteForceGuard, MemoryBruteForceStore, TooManyRequests } from "elpod";
+import { BruteForceGuard, MemoryBruteForceStore, TooManyRequests } from "@elpod/core";
 
 const guard = new BruteForceGuard({
   maxFailures: 5,
@@ -26,7 +26,7 @@ Record failures only after a real verification failure, clear state after succes
 Signed URLs provide an integrity and expiry boundary for links such as downloads:
 
 ```ts
-import { createSignedUrl, verifySignedUrl } from "elpod";
+import { createSignedUrl, verifySignedUrl } from "@elpod/core";
 
 const url = await createSignedUrl("https://example.test/download", secret, {
   expiresAt: Date.now() + 60_000,

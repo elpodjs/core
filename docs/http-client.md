@@ -9,7 +9,7 @@ Every outbound call can be slow, huge, redirected, unavailable, or aimed at the 
 `HttpClient` wraps native `fetch` with per-attempt timeouts, bounded body reads, safe retries, structured errors, and optional telemetry. It remains an application provider; it is not a service-discovery or network policy system.
 
 ```ts
-import { HttpClient, httpExponentialBackoff } from "elpod";
+import { HttpClient, httpExponentialBackoff } from "@elpod/core";
 
 const payments = new HttpClient({
   baseUrl: config.paymentsUrl,

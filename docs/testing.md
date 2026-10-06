@@ -10,7 +10,7 @@ Unit tests inspect one tool at a time. Application tests rehearse the whole scen
 
 ```ts
 import { afterEach, expect, test } from "bun:test";
-import { createTestApplication } from "elpod";
+import { createTestApplication } from "@elpod/core";
 import { app } from "../src/app";
 
 test("lists users", async () => {

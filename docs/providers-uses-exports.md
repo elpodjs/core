@@ -22,7 +22,7 @@ feature A.providers ── exports ──> feature B.imports
 Put process-wide resources such as a Prisma client, clock, logger, or HTTP client in `application({ providers })`. A feature lists the tokens it intentionally consumes with `uses`.
 
 ```ts
-import { provideFactory, token } from "elpod";
+import { provideFactory, token } from "@elpod/core";
 import { PrismaClient } from "@prisma/client";
 
 class PrismaDatabase {

@@ -9,7 +9,7 @@ An error is part of your API’s conversation with its caller. “Something went
 Throw `ElpodError` (or its helpers) for expected HTTP failures. Bootstrap serializes it into a stable payload and keeps unexpected details out of production responses.
 
 ```ts
-import { NotFound } from "elpod";
+import { NotFound } from "@elpod/core";
 
 const user = await users.find(id);
 if (!user) throw NotFound("User");

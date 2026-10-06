@@ -9,7 +9,7 @@ Production is a dark forest when all you have is “it failed”. Logs tell the 
 Elpod’s observability API is vendor-neutral. Pass a `Logger`, `Tracer`, or `Metrics` adapter to `bootstrap()`/`start()` and keep your vendor SDK in application infrastructure.
 
 ```ts
-import { bootstrap, consoleLogger } from "elpod";
+import { bootstrap, consoleLogger } from "@elpod/core";
 
 const server = await bootstrap(app, {
   logger: consoleLogger(),
@@ -27,7 +27,7 @@ Valid W3C `traceparent`/`tracestate` headers become parent context. `HttpClient`
 `openTelemetryTracer(api)` and `openTelemetryMetrics(provider)` adapt compatible OpenTelemetry API objects without making the framework depend on an SDK.
 
 ```ts
-import { openTelemetryMetrics, openTelemetryTracer } from "elpod";
+import { openTelemetryMetrics, openTelemetryTracer } from "@elpod/core";
 
 const server = await bootstrap(app, {
   tracer: openTelemetryTracer(otelApi, { name: "orders" }),

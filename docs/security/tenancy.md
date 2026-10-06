@@ -9,7 +9,7 @@ In a multi-tenant system, “the current customer” is part of almost every dec
 `tenancy()` resolves an explicit tenant from a request and exposes a typed `tenant` value to native Elysia handlers. It does not automatically isolate database rows or authorize cross-tenant access.
 
 ```ts
-import { tenancy, type TenantElysia } from "elpod";
+import { tenancy, type TenantElysia } from "@elpod/core";
 
 const tenantPlugin = tenancy((request) => {
   const id = request.headers.get("x-tenant-id");

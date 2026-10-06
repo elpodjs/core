@@ -9,7 +9,7 @@ Two guards are often confused. **CORS** asks which browser origins may read a re
 **CORS** controls which browser origins may read cross-origin responses. **CSRF** protects cookie-authenticated state changes from unwanted browser requests. They solve different problems.
 
 ```ts
-import { cors, csrfProtection } from "elpod";
+import { cors, csrfProtection } from "@elpod/core";
 
 const server = await bootstrap(app, {
   configure: (elysia) => csrfProtection({

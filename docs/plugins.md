@@ -9,7 +9,7 @@ An extension should be easy to answer two questions about: “What does it insta
 Elpod has two explicit extension points. A **Elpod plugin** is named and can own providers plus a native Elysia `configure` function. The `bootstrap({ configure })` callback is an unnamed, one-off application hook.
 
 ```ts
-import { application, plugin } from "elpod";
+import { application, plugin } from "@elpod/core";
 
 const requestLogging = plugin({
   name: "request-logging",

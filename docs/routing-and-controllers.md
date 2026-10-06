@@ -10,7 +10,7 @@ Elpod controllers are thin native Elysia route registrars. The `routes(app)` met
 
 ```ts
 import { t } from "elysia";
-import type { ElpodElysia } from "elpod";
+import type { ElpodElysia } from "@elpod/core";
 
 export class UsersController {
   routes(app: ElpodElysia) {
@@ -34,7 +34,7 @@ The request context includes `requestId` and `correlationId`, and Elpod returns 
 Elpod preserves the native route type assembled from pod controllers. Export the contract from the composition root:
 
 ```ts
-import { application, type ElpodContract } from "elpod";
+import { application, type ElpodContract } from "@elpod/core";
 
 export const app = application({ features: [users] });
 export type Api = ElpodContract<typeof app>;

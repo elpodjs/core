@@ -9,7 +9,7 @@ Documentation drifts when it is written beside the application instead of from i
 Because Elpod registers native Elysia routes, it can inspect the routes that actually exist. `routeManifest(server)` returns method, path, and native Elysia `detail` metadata.
 
 ```ts
-import { routeManifest } from "elpod";
+import { routeManifest } from "@elpod/core";
 
 const routes = routeManifest(server);
 console.log(routes);
@@ -27,7 +27,7 @@ elpod routes --json
 `openApiDocument()` derives an OpenAPI 3.1 document from registered routes and Elysia schemas. It preserves `detail`, path/query/header/cookie parameters, request bodies, response maps, hidden routes, and a reusable error schema.
 
 ```ts
-import { openApiRoutes } from "elpod";
+import { openApiRoutes } from "@elpod/core";
 
 const server = await bootstrap(app, {
   configure: (elysia) => openApiRoutes(elysia, {

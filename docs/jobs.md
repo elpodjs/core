@@ -9,7 +9,7 @@ An HTTP request is a guest at the front desk. It should receive a quick answer, 
 Jobs are typed work units. Elpod includes an in-memory queue for local work and tests, codec-based envelopes and a `DurableJobDispatcher` boundary for application-owned brokers, `JobWorker` for delivery, and `InMemoryScheduler` for fixed-delay local schedules.
 
 ```ts
-import { InMemoryJobQueue, exponentialBackoff } from "elpod";
+import { InMemoryJobQueue, exponentialBackoff } from "@elpod/core";
 
 const sendWelcomeEmail = {
   name: "send-welcome-email",
